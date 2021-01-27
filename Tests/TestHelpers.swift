@@ -75,6 +75,7 @@ struct Endpoint {
         case responseHeaders
         case status(Int)
         case stream(count: Int)
+        case websocket
         case xml
 
         var string: String {
@@ -113,6 +114,8 @@ struct Endpoint {
                 return "/status/\(code)"
             case let .stream(count):
                 return "/stream/\(count)"
+            case .websocket:
+                return "/websocket"
             case .xml:
                 return "/xml"
             }
@@ -201,6 +204,11 @@ struct Endpoint {
 
     static func stream(_ count: Int) -> Endpoint {
         Endpoint(path: .stream(count: count))
+    }
+    
+    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 12, *)
+    static func websocket(closeCode: URLSessionWebSocketTask.CloseCode = .normalClosure) -> Endpoint {
+        Endpoint(path: .websocket, queryItems: [.init(name: "closeCode", value: "\(closeCode.rawValue)")])
     }
 
     static var xml: Endpoint {
@@ -311,6 +319,11 @@ extension Session {
         streamRequest(endpoint as URLRequestConvertible,
                       automaticallyCancelOnStreamError: automaticallyCancelOnStreamError,
                       interceptor: interceptor)
+    }
+    
+    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 12, *)
+    func websocketRequest(_ endpoint: Endpoint, interceptor: RequestInterceptor? = nil) -> WebSocketRequest {
+        websocketRequest(endpoint as URLRequestConvertible, interceptor: interceptor)
     }
 
     func download<Parameters: Encodable>(_ endpoint: Endpoint,

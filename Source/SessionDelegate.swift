@@ -251,6 +251,21 @@ extension SessionDelegate: URLSessionDataDelegate {
     }
 }
 
+// MARK: URLSessionWebSocketDelegate
+
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 12, *)
+extension SessionDelegate: URLSessionWebSocketDelegate {
+    open func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
+        // TODO: Add event monitor method.
+        NSLog("URLSession: \(session), webSocketTask: \(webSocketTask), didOpenWithProtocol: \(`protocol` ?? "None")")
+    }
+    
+    open func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
+        // TODO: Add event monitor method.
+        NSLog("URLSession: \(session), webSocketTask: \(webSocketTask), didCloseWithCode: \(closeCode.rawValue), reason: \(reason ?? Data())")
+    }
+}
+
 // MARK: URLSessionDownloadDelegate
 
 extension SessionDelegate: URLSessionDownloadDelegate {

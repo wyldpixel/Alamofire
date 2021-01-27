@@ -1436,6 +1436,138 @@ extension DataStreamRequest.Stream {
     }
 }
 
+// MARK: - WebSocketRequest
+
+/// `Request` subclass which manages a WebSocket connection using `URLSessionWebSocketTask`.
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+public class WebSocketRequest: Request {
+    enum IncomingEvent {
+        case connected
+        case receivedMessage(URLSessionWebSocketTask.Message)
+        case disconnected
+    }
+    
+    public enum Event<Success, Failure: Error> {
+        case connected
+        case receivedMessage(Success)
+        case disconnected // Associate websocket disconnect info?
+    }
+    // TODO: Connect maximumMessageSize
+    
+    struct SocketMutableState {
+        var handlers: [(_ event: IncomingEvent) -> Void] = []
+    }
+    
+    @Protected
+    var socketMutableState = SocketMutableState()
+    
+    var socket: URLSessionWebSocketTask? {
+        task as? URLSessionWebSocketTask
+    }
+    
+    public let convertible: URLRequestConvertible
+    
+    init(id: UUID = UUID(),
+         convertible: URLRequestConvertible,
+         underlyingQueue: DispatchQueue,
+         serializationQueue: DispatchQueue,
+         eventMonitor: EventMonitor?,
+         interceptor: RequestInterceptor?,
+         delegate: RequestDelegate) {
+        self.convertible = convertible
+        
+        super.init(id: id,
+                   underlyingQueue: underlyingQueue,
+                   serializationQueue: serializationQueue,
+                   eventMonitor: eventMonitor,
+                   interceptor: interceptor,
+                   delegate: delegate)
+    }
+    
+    override func task(for request: URLRequest, using session: URLSession) -> URLSessionTask {
+        let copiedRequest = request
+        return session.webSocketTask(with: copiedRequest)
+    }
+    
+    override func didCreateTask(_ task: URLSessionTask) {
+        super.didCreateTask(task)
+        
+        guard let webSocketTask = task as? URLSessionWebSocketTask else {
+            fatalError("Invalid task of type \(task.self) created for WebSocketRequest.")
+        }
+        // TODO: What about the any old tasks? Reset their receive?
+        listen(to: webSocketTask)
+    }
+    
+    func didConnect() {
+        
+    }
+    
+    func didDisconnect() {
+        
+    }
+    
+    private func listen(to task: URLSessionWebSocketTask) {
+        // TODO: Do we care about the cycle while receiving?
+        task.receive { result in
+            switch result {
+            case let .success(message):
+                self.$socketMutableState.read { state in
+                    let localState = state
+                    self.underlyingQueue.async { localState.handlers.forEach { $0(.receivedMessage(message)) } }
+                }
+                self.listen(to: task)
+            case let .failure(error):
+                NSLog("Task: \(task), didReceiveError: \(error)")
+                if let error = error as? POSIXError, error.code.rawValue == 57 {
+                    print("Finishing")
+//                    self.finish()
+                } else {
+//                    self.retryOrFinish(error: .sessionTaskFailed(error: error))
+                }
+            }
+        }
+    }
+    
+    // TODO: Need connect and disconnect methods which connect to streams.
+    @discardableResult
+    public func responseMessage(on queue: DispatchQueue = .main, handler: @escaping (Event<URLSessionWebSocketTask.Message, Never>) -> Void) -> Self {
+        $socketMutableState.write { state in
+            state.handlers.append({ incomingEvent in
+                queue.async {
+                    switch incomingEvent {
+                    case .connected:
+                        handler(.connected)
+                    case let .receivedMessage(message):
+                        // TODO: Call serializers.
+                        handler(.receivedMessage(message))
+                    case .disconnected:
+                        handler(.disconnected)
+                    }
+                }
+            })
+        }
+        
+        $mutableState.read { mutableState in
+            guard mutableState.state.canTransitionTo(.resumed) else { return }
+            
+            underlyingQueue.async { if self.delegate?.startImmediately == true { self.resume() } }
+        }
+        
+        return self
+    }
+    
+    public func send(_ message: URLSessionWebSocketTask.Message,
+                     completionHandler: @escaping (Result<Void, Error>) -> Void) {
+        guard let socket = socket else {
+            // Call completion with error about there being no socket.
+            return
+        }
+        
+        socket.send(message) { completionHandler(Result(value: (), error: $0)) }
+    }
+}
+
 // MARK: - DownloadRequest
 
 /// `Request` subclass which downloads `Data` to a file on disk using `URLSessionDownloadTask`.
