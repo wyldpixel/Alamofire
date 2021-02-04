@@ -25,7 +25,7 @@
 import Alamofire
 import XCTest
 
-class HTTPHeadersTests: BaseTestCase {
+final class HTTPHeadersTests: BaseTestCase {
     func testHeadersAreStoreUniquelyByCaseInsensitiveName() {
         // Given
         let headersFromDictionaryLiteral: HTTPHeaders = ["key": "", "Key": "", "KEY": ""]

@@ -47,6 +47,73 @@
 		3113D46B21878227001CCD21 /* HTTPHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113D46A21878227001CCD21 /* HTTPHeadersTests.swift */; };
 		3113D46C21878227001CCD21 /* HTTPHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113D46A21878227001CCD21 /* HTTPHeadersTests.swift */; };
 		3113D46D21878227001CCD21 /* HTTPHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113D46A21878227001CCD21 /* HTTPHeadersTests.swift */; };
+		3116B96B25C8C210005453F4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4202FE01B667AA100C997FB /* Alamofire.framework */; };
+		3116B97125C8C231005453F4 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C256A501B096C2C0065714F /* BaseTestCase.swift */; };
+		3116B97225C8C23B005453F4 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31727421218BB9A50039FFCC /* TestHelpers.swift */; };
+		3116B97325C8C240005453F4 /* LeaksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762DC9247738FA0025C704 /* LeaksTests.swift */; };
+		3116B97425C8C243005453F4 /* NSLoggingEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9683B20BB70290009606F /* NSLoggingEventMonitor.swift */; };
+		3116B97525C8C248005453F4 /* SessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D1C6F419D52968002E74FE /* SessionTests.swift */; };
+		3116B97F25C8C2CB005453F4 /* AFError+AlamofireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED52E61D73889D00199085 /* AFError+AlamofireTests.swift */; };
+		3116B98025C8C2CD005453F4 /* FileManager+AlamofireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB028F1D7CF28F0056F249 /* FileManager+AlamofireTests.swift */; };
+		3116B98125C8C32A005453F4 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E6024419CB46A800A3E7F1 /* AuthenticationTests.swift */; };
+		3116B98225C8C32E005453F4 /* ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8111E5E19A9674D0040E7D1 /* ResponseTests.swift */; };
+		3116B98325C8C32E005453F4 /* SessionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9DCE771CB1BCE2003E6463 /* SessionDelegateTests.swift */; };
+		3116B98425C8C32E005453F4 /* InternalRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31425AC0241F098000EE3CCC /* InternalRequestTests.swift */; };
+		3116B98525C8C32E005453F4 /* RequestModifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B51E8B2434FECB005356DB /* RequestModifierTests.swift */; };
+		3116B98625C8C32E005453F4 /* ParameterEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31501E872196962A005829F2 /* ParameterEncoderTests.swift */; };
+		3116B98725C8C32E005453F4 /* ParameterEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8111E5C19A9674D0040E7D1 /* ParameterEncodingTests.swift */; };
+		3116B98825C8C32E005453F4 /* UploadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8111E5F19A9674D0040E7D1 /* UploadTests.swift */; };
+		3116B98925C8C32E005453F4 /* DataStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106FB6423F8D9E0007FAB43 /* DataStreamTests.swift */; };
+		3116B98A25C8C32E005453F4 /* DownloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8111E5B19A9674D0040E7D1 /* DownloadTests.swift */; };
+		3116B98B25C8C32E005453F4 /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8111E5D19A9674D0040E7D1 /* RequestTests.swift */; };
+		3116B98C25C8C343005453F4 /* RequestInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0CB630220BC70300604EDC /* RequestInterceptorTests.swift */; };
+		3116B98D25C8C34A005453F4 /* NetworkReachabilityManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D00571C66A8B900D1F709 /* NetworkReachabilityManagerTests.swift */; };
+		3116B98E25C8C34A005453F4 /* CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BADE4D2439A8D1007D2AB9 /* CombineTests.swift */; };
+		3116B98F25C8C34A005453F4 /* URLProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA7991B2BE71600B6F460 /* URLProtocolTests.swift */; };
+		3116B99025C8C34A005453F4 /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C341BB91B1A865A00C1B34D /* CacheTests.swift */; };
+		3116B99125C8C34A005453F4 /* HTTPHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113D46A21878227001CCD21 /* HTTPHeadersTests.swift */; };
+		3116B99225C8C34A005453F4 /* MultipartFormDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3238E61B3604DB00FE04AE /* MultipartFormDataTests.swift */; };
+		3116B99325C8C34A005453F4 /* RedirectHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0CB64A220CA8D600604EDC /* RedirectHandlerTests.swift */; };
+		3116B99425C8C34A005453F4 /* ServerTrustEvaluatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C33A1421B52089C00873DFF /* ServerTrustEvaluatorTests.swift */; };
+		3116B99525C8C34A005453F4 /* ProtectedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106FB6023F8C53A007FAB43 /* ProtectedTests.swift */; };
+		3116B99625C8C34A005453F4 /* AuthenticationInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0080C2455FE9700C38783 /* AuthenticationInterceptorTests.swift */; };
+		3116B99725C8C34A005453F4 /* TLSEvaluationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86AEFE51AE6A282007D9C76 /* TLSEvaluationTests.swift */; };
+		3116B99825C8C34A005453F4 /* ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE910119D28DCC0078C7B2 /* ValidationTests.swift */; };
+		3116B99925C8C34A005453F4 /* CachedResponseHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD6B132201338E00FFB5E3 /* CachedResponseHandlerTests.swift */; };
+		3116B99A25C8C34A005453F4 /* ResponseSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0B58381B747A4400C0B99C /* ResponseSerializationTests.swift */; };
+		3116B99B25C8C34A005453F4 /* RetryPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD217F220B48AE008F1C59 /* RetryPolicyTests.swift */; };
+		3116B99C25C8C350005453F4 /* Result+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DD7EA224C627300249836 /* Result+Alamofire.swift */; };
+		3116B99D25C8C4BB005453F4 /* utf32_string.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CFB02F31D7D2FA20056F249 /* utf32_string.txt */; };
+		3116B99E25C8C4BE005453F4 /* utf8_string.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CFB02F41D7D2FA20056F249 /* utf8_string.txt */; };
+		3116B99F25C8C4C0005453F4 /* empty_string.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CFB02F21D7D2FA20056F249 /* empty_string.txt */; };
+		3116B9A025C8C4C4005453F4 /* empty_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CFB02EA1D7D2FA20056F249 /* empty_data.json */; };
+		3116B9A125C8C4C4005453F4 /* invalid_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CFB02EB1D7D2FA20056F249 /* invalid_data.json */; };
+		3116B9A225C8C4C4005453F4 /* valid_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CFB02EC1D7D2FA20056F249 /* valid_data.json */; };
+		3116B9A325C8C4C7005453F4 /* unicorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33A1241B5207DB00873DFF /* unicorn.png */; };
+		3116B9A425C8C4C7005453F4 /* rainbow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C33A1231B5207DB00873DFF /* rainbow.jpg */; };
+		3116B9A525C8C4CB005453F4 /* certDER.cer in Resources */ = {isa = PBXBuildFile; fileRef = B39E2F831C1A72F8002DA1A9 /* certDER.cer */; };
+		3116B9A625C8C4CB005453F4 /* certDER.der in Resources */ = {isa = PBXBuildFile; fileRef = B39E2F851C1A72F8002DA1A9 /* certDER.der */; };
+		3116B9A725C8C4CB005453F4 /* randomGibberish.crt in Resources */ = {isa = PBXBuildFile; fileRef = B39E2F891C1A72F8002DA1A9 /* randomGibberish.crt */; };
+		3116B9A825C8C4CB005453F4 /* certPEM.cer in Resources */ = {isa = PBXBuildFile; fileRef = B39E2F861C1A72F8002DA1A9 /* certPEM.cer */; };
+		3116B9A925C8C4CB005453F4 /* certPEM.crt in Resources */ = {isa = PBXBuildFile; fileRef = B39E2F871C1A72F8002DA1A9 /* certPEM.crt */; };
+		3116B9AA25C8C4CB005453F4 /* certDER.crt in Resources */ = {isa = PBXBuildFile; fileRef = B39E2F841C1A72F8002DA1A9 /* certDER.crt */; };
+		3116B9AB25C8C4CB005453F4 /* keyDER.der in Resources */ = {isa = PBXBuildFile; fileRef = B39E2F8A1C1A72F8002DA1A9 /* keyDER.der */; };
+		3116B9AC25C8C4CF005453F4 /* expired.badssl.com-intermediate-ca-1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB206A1D4549E000C64D5B /* expired.badssl.com-intermediate-ca-1.cer */; };
+		3116B9AD25C8C4CF005453F4 /* expired.badssl.com-leaf.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB20681D4549E000C64D5B /* expired.badssl.com-leaf.cer */; };
+		3116B9AE25C8C4CF005453F4 /* expired.badssl.com-intermediate-ca-2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB206B1D4549E000C64D5B /* expired.badssl.com-intermediate-ca-2.cer */; };
+		3116B9AF25C8C4CF005453F4 /* expired.badssl.com-root-ca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB20691D4549E000C64D5B /* expired.badssl.com-root-ca.cer */; };
+		3116B9B025C8C4D2005453F4 /* signed-by-ca2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C511B535F540017E0BF /* signed-by-ca2.cer */; };
+		3116B9B125C8C4D2005453F4 /* valid-dns-name.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C521B535F540017E0BF /* valid-dns-name.cer */; };
+		3116B9B225C8C4D2005453F4 /* valid-uri.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C531B535F540017E0BF /* valid-uri.cer */; };
+		3116B9B325C8C4D2005453F4 /* expired.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C4F1B535F540017E0BF /* expired.cer */; };
+		3116B9B425C8C4D2005453F4 /* missing-dns-name-and-uri.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C501B535F540017E0BF /* missing-dns-name-and-uri.cer */; };
+		3116B9B525C8C4D6005453F4 /* signed-by-ca1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C451B535F400017E0BF /* signed-by-ca1.cer */; };
+		3116B9B625C8C4D6005453F4 /* test.alamofire.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C461B535F400017E0BF /* test.alamofire.org.cer */; };
+		3116B9B725C8C4D6005453F4 /* multiple-dns-names.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C441B535F400017E0BF /* multiple-dns-names.cer */; };
+		3116B9B825C8C4D6005453F4 /* wildcard.alamofire.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C431B535F400017E0BF /* wildcard.alamofire.org.cer */; };
+		3116B9B925C8C4DA005453F4 /* alamofire-signing-ca1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C3D1B535F2E0017E0BF /* alamofire-signing-ca1.cer */; };
+		3116B9BA25C8C4DA005453F4 /* alamofire-signing-ca2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C3E1B535F2E0017E0BF /* alamofire-signing-ca2.cer */; };
+		3116B9BB25C8C4DF005453F4 /* alamofire-root-ca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4C812C3A1B535F220017E0BF /* alamofire-root-ca.cer */; };
 		311A89BF23185BBF003BB714 /* CachedResponseHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD6B132201338E00FFB5E3 /* CachedResponseHandlerTests.swift */; };
 		311A89C023185BBF003BB714 /* CachedResponseHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD6B132201338E00FFB5E3 /* CachedResponseHandlerTests.swift */; };
 		311A89C123185BC0003BB714 /* CachedResponseHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD6B132201338E00FFB5E3 /* CachedResponseHandlerTests.swift */; };
@@ -351,6 +418,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3116B96C25C8C210005453F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8111E2A19A95C8B0040E7D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4202FCD1B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
 		4CF626FA1BA7CB3E0011A099 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8111E2A19A95C8B0040E7D1 /* Project object */;
@@ -379,6 +453,8 @@
 		3106FB6423F8D9E0007FAB43 /* DataStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStreamTests.swift; sourceTree = "<group>"; };
 		3111CE8720A77843008315E2 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		3113D46A21878227001CCD21 /* HTTPHeadersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeadersTests.swift; sourceTree = "<group>"; };
+		3116B96625C8C210005453F4 /* Alamofire watchOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alamofire watchOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3116B96A25C8C210005453F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311B198F20B0D3B40036823B /* MultipartUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartUpload.swift; sourceTree = "<group>"; };
 		312D1E0B1FC2551400E51FF1 /* Usage.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = Usage.md; path = Documentation/Usage.md; sourceTree = "<group>"; };
 		312D1E0C1FC2551400E51FF1 /* AdvancedUsage.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = AdvancedUsage.md; path = Documentation/AdvancedUsage.md; sourceTree = "<group>"; };
@@ -502,6 +578,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3116B96325C8C210005453F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3116B96B25C8C210005453F4 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CF626EB1BA7CB3E0011A099 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -557,6 +641,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3116B96725C8C210005453F4 /* Alamofire watchOS Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3116B96A25C8C210005453F4 /* Info.plist */,
+			);
+			path = "Alamofire watchOS Tests";
+			sourceTree = "<group>";
+		};
 		4C256A4E1B09656A0065714F /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -859,6 +951,7 @@
 				4CE292301EF4A386008DA555 /* Documentation */,
 				F8111E3519A95C8B0040E7D1 /* Source */,
 				F8111E3F19A95C8B0040E7D1 /* Tests */,
+				3116B96725C8C210005453F4 /* Alamofire watchOS Tests */,
 				F8111E3419A95C8B0040E7D1 /* Products */,
 			);
 			indentWidth = 4;
@@ -876,6 +969,7 @@
 				E4202FE01B667AA100C997FB /* Alamofire.framework */,
 				4CF626EF1BA7CB3E0011A099 /* Alamofire.framework */,
 				4CF626F81BA7CB3E0011A099 /* Alamofire tvOS Tests.xctest */,
+				3116B96625C8C210005453F4 /* Alamofire watchOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -959,6 +1053,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3116B96525C8C210005453F4 /* Alamofire watchOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3116B97025C8C210005453F4 /* Build configuration list for PBXNativeTarget "Alamofire watchOS Tests" */;
+			buildPhases = (
+				3116B96225C8C210005453F4 /* Sources */,
+				3116B96325C8C210005453F4 /* Frameworks */,
+				3116B96425C8C210005453F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3116B96D25C8C210005453F4 /* PBXTargetDependency */,
+			);
+			name = "Alamofire watchOS Tests";
+			productName = "Alamofire watchOS Tests";
+			productReference = 3116B96625C8C210005453F4 /* Alamofire watchOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4CF626EE1BA7CB3E0011A099 /* Alamofire tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CF627041BA7CB3E0011A099 /* Build configuration list for PBXNativeTarget "Alamofire tvOS" */;
@@ -1091,10 +1203,13 @@
 		F8111E2A19A95C8B0040E7D1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1230;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = Alamofire;
 				TargetAttributes = {
+					3116B96525C8C210005453F4 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					4CF626EE1BA7CB3E0011A099 = {
 						CreatedOnToolsVersion = 7.1;
 						LastSwiftMigration = 0900;
@@ -1146,11 +1261,50 @@
 				4CF626EE1BA7CB3E0011A099 /* Alamofire tvOS */,
 				4CF626F71BA7CB3E0011A099 /* Alamofire tvOS Tests */,
 				E4202FCD1B667AA100C997FB /* Alamofire watchOS */,
+				3116B96525C8C210005453F4 /* Alamofire watchOS Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3116B96425C8C210005453F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3116B9A725C8C4CB005453F4 /* randomGibberish.crt in Resources */,
+				3116B9A225C8C4C4005453F4 /* valid_data.json in Resources */,
+				3116B9A625C8C4CB005453F4 /* certDER.der in Resources */,
+				3116B9AE25C8C4CF005453F4 /* expired.badssl.com-intermediate-ca-2.cer in Resources */,
+				3116B9A825C8C4CB005453F4 /* certPEM.cer in Resources */,
+				3116B9A925C8C4CB005453F4 /* certPEM.crt in Resources */,
+				3116B9B525C8C4D6005453F4 /* signed-by-ca1.cer in Resources */,
+				3116B9AD25C8C4CF005453F4 /* expired.badssl.com-leaf.cer in Resources */,
+				3116B9B825C8C4D6005453F4 /* wildcard.alamofire.org.cer in Resources */,
+				3116B9A525C8C4CB005453F4 /* certDER.cer in Resources */,
+				3116B99E25C8C4BE005453F4 /* utf8_string.txt in Resources */,
+				3116B99F25C8C4C0005453F4 /* empty_string.txt in Resources */,
+				3116B99D25C8C4BB005453F4 /* utf32_string.txt in Resources */,
+				3116B9B425C8C4D2005453F4 /* missing-dns-name-and-uri.cer in Resources */,
+				3116B9AF25C8C4CF005453F4 /* expired.badssl.com-root-ca.cer in Resources */,
+				3116B9B625C8C4D6005453F4 /* test.alamofire.org.cer in Resources */,
+				3116B9A425C8C4C7005453F4 /* rainbow.jpg in Resources */,
+				3116B9BB25C8C4DF005453F4 /* alamofire-root-ca.cer in Resources */,
+				3116B9AB25C8C4CB005453F4 /* keyDER.der in Resources */,
+				3116B9BA25C8C4DA005453F4 /* alamofire-signing-ca2.cer in Resources */,
+				3116B9B025C8C4D2005453F4 /* signed-by-ca2.cer in Resources */,
+				3116B9A325C8C4C7005453F4 /* unicorn.png in Resources */,
+				3116B9B325C8C4D2005453F4 /* expired.cer in Resources */,
+				3116B9B225C8C4D2005453F4 /* valid-uri.cer in Resources */,
+				3116B9AC25C8C4CF005453F4 /* expired.badssl.com-intermediate-ca-1.cer in Resources */,
+				3116B9B925C8C4DA005453F4 /* alamofire-signing-ca1.cer in Resources */,
+				3116B9B725C8C4D6005453F4 /* multiple-dns-names.cer in Resources */,
+				3116B9AA25C8C4CB005453F4 /* certDER.crt in Resources */,
+				3116B9B125C8C4D2005453F4 /* valid-dns-name.cer in Resources */,
+				3116B9A025C8C4C4005453F4 /* empty_data.json in Resources */,
+				3116B9A125C8C4C4005453F4 /* invalid_data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CF626ED1BA7CB3E0011A099 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1296,6 +1450,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3116B96225C8C210005453F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3116B97425C8C243005453F4 /* NSLoggingEventMonitor.swift in Sources */,
+				3116B98025C8C2CD005453F4 /* FileManager+AlamofireTests.swift in Sources */,
+				3116B98825C8C32E005453F4 /* UploadTests.swift in Sources */,
+				3116B97125C8C231005453F4 /* BaseTestCase.swift in Sources */,
+				3116B98325C8C32E005453F4 /* SessionDelegateTests.swift in Sources */,
+				3116B97225C8C23B005453F4 /* TestHelpers.swift in Sources */,
+				3116B99925C8C34A005453F4 /* CachedResponseHandlerTests.swift in Sources */,
+				3116B99625C8C34A005453F4 /* AuthenticationInterceptorTests.swift in Sources */,
+				3116B98225C8C32E005453F4 /* ResponseTests.swift in Sources */,
+				3116B98F25C8C34A005453F4 /* URLProtocolTests.swift in Sources */,
+				3116B99B25C8C34A005453F4 /* RetryPolicyTests.swift in Sources */,
+				3116B98425C8C32E005453F4 /* InternalRequestTests.swift in Sources */,
+				3116B98625C8C32E005453F4 /* ParameterEncoderTests.swift in Sources */,
+				3116B99425C8C34A005453F4 /* ServerTrustEvaluatorTests.swift in Sources */,
+				3116B99025C8C34A005453F4 /* CacheTests.swift in Sources */,
+				3116B98B25C8C32E005453F4 /* RequestTests.swift in Sources */,
+				3116B99825C8C34A005453F4 /* ValidationTests.swift in Sources */,
+				3116B98C25C8C343005453F4 /* RequestInterceptorTests.swift in Sources */,
+				3116B98925C8C32E005453F4 /* DataStreamTests.swift in Sources */,
+				3116B98E25C8C34A005453F4 /* CombineTests.swift in Sources */,
+				3116B99A25C8C34A005453F4 /* ResponseSerializationTests.swift in Sources */,
+				3116B99725C8C34A005453F4 /* TLSEvaluationTests.swift in Sources */,
+				3116B98725C8C32E005453F4 /* ParameterEncodingTests.swift in Sources */,
+				3116B99125C8C34A005453F4 /* HTTPHeadersTests.swift in Sources */,
+				3116B98D25C8C34A005453F4 /* NetworkReachabilityManagerTests.swift in Sources */,
+				3116B97325C8C240005453F4 /* LeaksTests.swift in Sources */,
+				3116B98A25C8C32E005453F4 /* DownloadTests.swift in Sources */,
+				3116B99325C8C34A005453F4 /* RedirectHandlerTests.swift in Sources */,
+				3116B98525C8C32E005453F4 /* RequestModifierTests.swift in Sources */,
+				3116B97F25C8C2CB005453F4 /* AFError+AlamofireTests.swift in Sources */,
+				3116B99525C8C34A005453F4 /* ProtectedTests.swift in Sources */,
+				3116B99225C8C34A005453F4 /* MultipartFormDataTests.swift in Sources */,
+				3116B97525C8C248005453F4 /* SessionTests.swift in Sources */,
+				3116B98125C8C32A005453F4 /* AuthenticationTests.swift in Sources */,
+				3116B99C25C8C350005453F4 /* Result+Alamofire.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CF626EA1BA7CB3E0011A099 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1593,6 +1789,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3116B96D25C8C210005453F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4202FCD1B667AA100C997FB /* Alamofire watchOS */;
+			targetProxy = 3116B96C25C8C210005453F4 /* PBXContainerItemProxy */;
+		};
 		4CF626FB1BA7CB3E0011A099 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4CF626EE1BA7CB3E0011A099 /* Alamofire tvOS */;
@@ -1611,6 +1812,66 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3116B96E25C8C210005453F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Alamofire watchOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.alamofire.Alamofire-watchOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		3116B96F25C8C210005453F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Alamofire watchOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.alamofire.Alamofire-watchOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
 		4CF627001BA7CB3E0011A099 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2002,6 +2263,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3116B97025C8C210005453F4 /* Build configuration list for PBXNativeTarget "Alamofire watchOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3116B96E25C8C210005453F4 /* Debug */,
+				3116B96F25C8C210005453F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4CF627041BA7CB3E0011A099 /* Build configuration list for PBXNativeTarget "Alamofire tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

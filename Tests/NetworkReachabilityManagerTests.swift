@@ -22,6 +22,7 @@
 //  THE SOFTWARE.
 //
 
+#if !os(watchOS)
 @testable import Alamofire
 import Foundation
 import SystemConfiguration
@@ -297,3 +298,4 @@ final class NetworkReachabilityManagerTestCase: BaseTestCase {
     }
     #endif
 }
+#endif

@@ -1318,6 +1318,11 @@ final class DataPreprocessorTests: BaseTestCase {
 extension HTTPURLResponse {
     convenience init(statusCode: Int, headers: HTTPHeaders? = nil) {
         let url = Endpoint().url
-        self.init(url: url, statusCode: statusCode, httpVersion: String(kCFHTTPVersion1_1), headerFields: headers?.dictionary)!
+        #if os(watchOS)
+        let version = "HTTP/1.1"
+        #else
+        let version = String(kCFHTTPVersion1_1)
+        #endif
+        self.init(url: url, statusCode: statusCode, httpVersion: version, headerFields: headers?.dictionary)!
     }
 }
